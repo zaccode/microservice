@@ -13,3 +13,15 @@ spring:
   cloud:
     compatibility-verifier:
       enabled: false
+
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
+      base-path: /actuator
+  endpoint:
+    prometheus:
+      enabled: true
