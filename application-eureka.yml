@@ -1,8 +1,8 @@
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8090/eureka/
-      # defaultZone: http://discovery-service:8090/eureka/
+      # defaultZone: http://localhost:8090/eureka/
+      defaultZone: http://discovery-service:8090/eureka/
     fetch-registry: true
     register-with-eureka: true
 
@@ -17,11 +17,18 @@ spring:
 
 
 management:
+  info:
+    git:
+      mode: full
   endpoints:
     web:
       exposure:
-        include: health,info,prometheus
-      base-path: /actuator
-  endpoint:
-    prometheus:
-      enabled: true
+        include: "*"   # expose all endpoints
+  metrics:
+    tags:
+      application: ${spring.application.name}
+  tracing:
+    enabled: false
+    sampling:
+      probability: 1.0
+
