@@ -31,4 +31,10 @@ management:
     enabled: false
     sampling:
       probability: 1.0
+   otlp:
+    tracing:
+      endpoint: http://tempo:4318/v1/traces
+  zipkin:
+    tracing:
+      endpoint: http://tempo:9411/api/v2/spans
 
