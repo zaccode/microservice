@@ -36,4 +36,4 @@ management:
     # OR if you use Zipkin instead of OTLP
     zipkin:
       tracing:
-        endpoint: http://tempo:9411
+        endpoint: http://tempo:3200
