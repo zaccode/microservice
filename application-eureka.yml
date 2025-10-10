@@ -15,24 +15,31 @@ spring:
       enabled: false
 
 
+# management:
+#   info:
+#     git:
+#       mode: full
+#   endpoints:
+#     web:
+#       exposure:
+#         include: "*"   # expose all endpoints
+#   metrics:
+#     tags:
+#       application: ${spring.application.name}
+#   tracing:
+#     enabled: true
+#     sampling:
+#       probability: 1.0
+#     # otlp:
+#     #   tracing:
+#     #     endpoint: http://tempo:4318/v1/traces
+#     # OR if you use Zipkin instead of OTLP
+#     zipkin:
+#       endpoint: http://tempo:9411
 management:
-  info:
-    git:
-      mode: full
-  endpoints:
-    web:
-      exposure:
-        include: "*"   # expose all endpoints
-  metrics:
-    tags:
-      application: ${spring.application.name}
   tracing:
     enabled: true
     sampling:
       probability: 1.0
-    # otlp:
-    #   tracing:
-    #     endpoint: http://tempo:4318/v1/traces
-    # OR if you use Zipkin instead of OTLP
     zipkin:
-      endpoint: http://tempo:9411
+      endpoint: http://tempo:9411/api/v2/spans
