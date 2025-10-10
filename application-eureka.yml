@@ -36,4 +36,4 @@ management:
     # OR if you use Zipkin instead of OTLP
     zipkin:
       tracing:
-        endpoint: http://tempo:9411/api/v2/spans
+        endpoint: http://localhost:9411/api/v2/spans
