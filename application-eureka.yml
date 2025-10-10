@@ -37,10 +37,11 @@ spring:
     # zipkin:
     #   tracing:
     #     endpoint: http://tempo:9411
-# management:
-#   tracing:
-#     enabled: true
-#     sampling:
-#       probability: 1.0
-#     zipkin:
-#       endpoint: http://tempo:9411/api/v2/spans
+management:
+  tracing:
+    enabled: ${MANAGEMENT_TRACING_ENABLED:true}   # uses env var, defaults to true
+    sampling:
+      probability: 1.0
+    zipkin:
+      endpoint: ${MANAGEMENT_ZIPKIN_TRACING_ENDPOINT:http://localhost:9411}
+
