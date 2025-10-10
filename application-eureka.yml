@@ -15,21 +15,21 @@ spring:
       enabled: false
 
 
-management:
-  info:
-    git:
-      mode: full
-  endpoints:
-    web:
-      exposure:
-        include: "*"   # expose all endpoints
-  metrics:
-    tags:
-      application: ${spring.application.name}
-  tracing:
-    enabled: true
-    sampling:
-      probability: 1.0
+# management:
+#   info:
+#     git:
+#       mode: full
+#   endpoints:
+#     web:
+#       exposure:
+#         include: "*"   # expose all endpoints
+#   metrics:
+#     tags:
+#       application: ${spring.application.name}
+#   tracing:
+#     enabled: true
+#     sampling:
+#       probability: 1.0
 #     # otlp:
 #     #   tracing:
 #     #     endpoint: http://tempo:4318/v1/traces
