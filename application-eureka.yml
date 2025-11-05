@@ -31,4 +31,4 @@ management:
     sampling:
       probability: 1.0           # tracing sampling probability
     zipkin:
-      endpoint: ${MANAGEMENT_ZIPKIN_TRACING_ENDPOINT:http://tempo:9411}  # Zipkin/Tempo endpoint from env
+      endpoint: ${MANAGEMENT_ZIPKIN_TRACING_ENDPOINT:http://tempo:9411/api/v2/spans}  # Zipkin/Tempo endpoint from env
