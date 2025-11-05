@@ -30,5 +30,6 @@ management:
     enabled: ${MANAGEMENT_TRACING_ENABLED:true}   # enable tracing via env variable
     sampling:
       probability: 1.0           # tracing sampling probability
-    zipkin:
+  zipkin:
+    tracing:
       endpoint: ${MANAGEMENT_ZIPKIN_TRACING_ENDPOINT:http://tempo:9411/api/v2/spans}  # Zipkin/Tempo endpoint from env
