@@ -9,27 +9,27 @@ eureka:
   instance:
     prefer-ip-address: true
 
-# spring:
-#   cloud:
-#     compatibility-verifier:
-#       enabled: false
+spring:
+  cloud:
+    compatibility-verifier:
+      enabled: false
 
 
-# management:
-#   info:
-#     git:
-#       mode: full                  # Git info for actuator / info endpoint
-#   endpoints:
-#     web:
-#       exposure:
-#         include: "*"              # expose all actuator endpoints
-#   metrics:
-#     tags:
-#       application: ${spring.application.name}   # dynamic application name from env
-#   tracing:
-#     enabled: ${MANAGEMENT_TRACING_ENABLED:true}   # enable tracing via env variable
-#     sampling:
-#       probability: 1.0           # tracing sampling probability
-#   zipkin:
-#     tracing:
-#       endpoint: ${MANAGEMENT_ZIPKIN_TRACING_ENDPOINT:http://tempo:9411/api/v2/spans}  # Zipkin/Tempo endpoint from env
+management:
+  info:
+    git:
+      mode: full                  # Git info for actuator / info endpoint
+  endpoints:
+    web:
+      exposure:
+        include: "*"              # expose all actuator endpoints
+  metrics:
+    tags:
+      application: ${spring.application.name}   # dynamic application name from env
+  tracing:
+    enabled: ${MANAGEMENT_TRACING_ENABLED:true}   # enable tracing via env variable
+    sampling:
+      probability: 1.0           # tracing sampling probability
+  zipkin:
+    tracing:
+      endpoint: ${MANAGEMENT_ZIPKIN_TRACING_ENDPOINT:http://tempo:9411/api/v2/spans}  # Zipkin/Tempo endpoint from env
